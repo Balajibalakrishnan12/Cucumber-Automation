@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="loginsuite">
+	<test name="Test">
+	<parameter name="username" value="standard_user"/>
+		<parameter name="password" value="secret_sauce"/>
+		<parameter name="uname" value="standard_user"/>
+		<parameter name="pwd" value="secret_sauce"/>
+		<classes>
+			<class name="testing.TestCases">
+				<methods>
+					<include name="loginpage" />
+					<include name="productpage" />
+				</methods>
+			</class>
+			<class name="testing.TestingUser">
+				<methods>
+					<include name="loginaccount" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!--		
+	Test -->
+  <test name="Smoketest">
+  <parameter name="username" value="standard_user"/>
+		<parameter name="password" value="secret_sauce"/>
+		<classes>
+			<class name="testing.TestCases">
+			</class>
+		</classes>
+	</test>
+	<test name="DataProviderTest">
+	<classes>
+	<class name="testing.TestwithDataProvider">
+	</class>
+	</classes>
+	
+	</test>
+
+	<!-- Test --> </suite> <!-- Suite -->
+
