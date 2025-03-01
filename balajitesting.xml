@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="loginsuite">
+<listeners>
+<listener class-name="utility.CustomTestListener"/>
+</listeners>
+
+  <test name="Browsing">
+	
+	<classes>
+	<class name="testing.Browser">
+	</class>
+	</classes>
+	</test>	
+</suite> <!-- Suite -->

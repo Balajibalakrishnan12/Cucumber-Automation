@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.88 s <<< FAILURE! - in TestSuite
+loginpage(testing.TestCases)  Time elapsed: 0.642 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Cannot inject @Test annotated Method [loginpage] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
+
+productpage(testing.TestCases)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "pages.ProductPage.driver" is null
+	at testing.TestCases.productpage(TestCases.java:48)
+
+loginaccount(testing.TestingUser)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "pages.LoginPage.driver" is null
+	at testing.TestingUser.loginaccount(TestingUser.java:30)
+

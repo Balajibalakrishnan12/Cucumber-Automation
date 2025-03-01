@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [loginsuite]" verbose="0">
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <parameter name="password" value="secret_sauce"/>
+    <parameter name="uname" value="standard_user"/>
+    <parameter name="pwd" value="secret_sauce"/>
+    <parameter name="username" value="standard_user"/>
+    <groups>
+      <run>
+        <include name="demotest"/>
+        <include name="demotest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testing.TestingUser">
+        <methods>
+          <include name="loginaccount" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testing.TestingUser -->
+      <class name="testing.TestCases">
+        <methods>
+          <include name="loginpage"/>
+          <include name="productpage"/>
+        </methods>
+      </class> <!-- testing.TestCases -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [loginsuite] -->
