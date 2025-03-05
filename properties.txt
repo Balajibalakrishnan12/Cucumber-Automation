@@ -1,7 +1,1 @@
-hi.
-hello
-how are you?
-i am good
-thank you
-ok good
-lets code
+welcome to new branch
