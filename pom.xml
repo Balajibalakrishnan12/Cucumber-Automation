@@ -100,11 +100,31 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.2</version>
 				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-						<!-- Path to your
-						testng.xml -->
-					</suiteXmlFiles>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<includes>
+						<include>**/*Test.java</include>
+						<include>**/Test*.java</include>
+						<include>**/*TestSuite.java</include>
+						<include>**/When*.java</include>
+					</includes>
+					<systemPropertyVariables>
+						<junit.jupiter.extensions.autodetection.enabled>true
+						</junit.jupiter.extensions.autodetection.enabled>
+					</systemPropertyVariables>
 				</configuration>
 			</plugin>
 		</plugins>

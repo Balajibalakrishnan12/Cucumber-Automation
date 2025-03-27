@@ -1,6 +1,5 @@
 
-
-	Feature: Login
+ 	Feature: Login
   I want to test the login functionality
 
 	Background: launch browser and url
@@ -16,10 +15,10 @@
 	When user enters invalid username and password
 	Then user not able login and should get error 
 
-	@Login @E2E
+	@Login 
 	#seconario outline is used to run the test using table
 	Scenario Outline: Login Flow With Parameter 
-  #Given user navigate to the login page
+  Given user navigate to the login page
   #passing parameter(if we pass in diamond bracket means passing variable parameter from examples
 	When user enters valid username-"<username>" and password-"<password>"
 	Then user should be successfully logged in and navigates to product page
@@ -37,7 +36,7 @@
 	
 	@ProductPage
 	Scenario: Login Flow With Parameter and Checking Selected products is available in cart
-  #Given user navigate to the login page
+ # Given user navigate to the login page
 	When user enters valid username-"standard_user" and password-"secret_sauce"
 	Then user should be successfully logged in and navigates to product page
 	And user select products
@@ -50,6 +49,10 @@
 	|Sauce Labs Bike Light|
 	|Sauce Labs Bolt T-Shirt|
 	And user click the checkoutbutton
+	When user is able to add the user details and click continue 
+	Then user verify the calculation of all the product amount 
+	* user click finish button to end the payment
+	
 	
 
 

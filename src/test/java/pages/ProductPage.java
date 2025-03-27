@@ -38,7 +38,7 @@ public class ProductPage extends DriverManager{
 		Select dropDownValue = new Select(dropDownelement);
 		dropDownValue.selectByValue(value);
 	}
-	public  void explicitWait(WebElement element)
+	public void explicitWait(WebElement element)
 	{
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(element));
@@ -55,10 +55,7 @@ public class ProductPage extends DriverManager{
 		logoutButton.click();
 	}
 	
-	
-	
-	
-	
+
 	public  void productSelection(List<String>products)
 	{
 		//direct iteratoration taking webelement

@@ -2,11 +2,14 @@ package steps;
 
 import java.util.List;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Addtocart;
+import pages.FinalStatus;
 import pages.LoginPage;
+import pages.Payment;
 import pages.ProductPage;
 import utility.DriverManager;
 
@@ -71,6 +74,27 @@ public class LoginSteps {
 		Addtocart cart=new Addtocart();
 		cart.checkout();
 	}
+	
+	@When("user is able to add the user details and click continue")
+	public void user_is_able_to_add_the_user_details_and_click_continue() {
+		Payment details = new Payment();
+		details.paymentofproducts("balaji","Balakrishnan",605004);
+		
+	}
+	@Then("user verify the calculation of all the product amount")
+	public void user_verify_the_calculation_of_all_the_product_amount() {
+		FinalStatus payment=new FinalStatus();
+		payment.calculation();
+	  
+	}
+	
+	@Then("user click finish button to end the payment")
+	public void user_click_finish_button_to_end_the_payment() {
+		FinalStatus end=new FinalStatus();
+
+		end.finish();
+	}
+
 
 
 

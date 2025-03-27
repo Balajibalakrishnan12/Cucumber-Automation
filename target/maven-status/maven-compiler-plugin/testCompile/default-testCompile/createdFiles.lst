@@ -1,11 +1,12 @@
+steps\CucumberHooks.class
+steps\LoginSteps.class
 pages\ProductPage.class
-testing\TestCases.class
 pages\LoginPage.class
+runners\TestRunner.class
 pages\Payment.class
 utility\DriverManager.class
-testing\TestingUser.class
 utility\ScreenShotUtility.class
-testing\TestwithDataProvider.class
 utility\ExcelUtility.class
+utility\CustomTestListener.class
 pages\FinalStatus.class
 pages\Addtocart.class

@@ -3,6 +3,8 @@ package utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class DriverManager {
 	
 	public static WebDriver driver;
@@ -13,7 +15,8 @@ public class DriverManager {
 	 switch(browserName){
 	 
 	 case "chrome":
-		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\Automation\\chromedriver.exe"); 
+		 //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\eclipse-workspace\\Automation\\chromedriver.exe");
+		 	WebDriverManager.chromedriver().setup();// it automatically updated the current chrome browers
 			driver = new ChromeDriver();
 			
 			break;

@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 	features="src/test/resources/features",
 	glue = "steps",
-	tags="@notimportant",
+	tags="@ProductPage",
 	plugin = {"pretty", "html:target/cucumber-reports"})//cucumberOption is testng annotation
 public class TestRunner {
 
