@@ -31,6 +31,7 @@ public class FinalStatus extends DriverManager {
 		 WebElement finishbutton = driver.findElement(By.xpath("//a[text()='FINISH']"));
 		 
 		finishbutton.click();
+		System.out.println("payment success");
 	}
 
 }
